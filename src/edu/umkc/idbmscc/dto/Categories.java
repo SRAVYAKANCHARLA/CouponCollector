@@ -7,6 +7,9 @@ import java.io.Serializable;
  * @author Rajesh Kapa
  *
  */
+/**
+ * This cla
+ */
 public class Categories implements Serializable{
 	/**
 	 * 
