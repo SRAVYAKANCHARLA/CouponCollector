@@ -32,7 +32,7 @@ public class JsonParser {
 
 	public static void main(String[] args) throws Exception {
 
-	    String json = readUrl("http://api.8coupons.com/v1/getrealtimelocaldeals?key=e9c726dbd8e2bb665f2069d8b08ff22a0713912f80f99a31764f20a0abd63a5c35afcc69b91259161e2556d49fa6d674&page=8");
+	    String json = readUrl("http://api.8coupons.com/v1/getrealtimelocaldeals?key=e9c726dbd8e2bb665f2069d8b08ff22a0713912f80f99a31764f20a0abd63a5c35afcc69b91259161e2556d49fa6d674&page=33");
 	    PreparedStatement prepStmt = null;
 		ResultSet rs = null;
 		DBConnection connection = new DBConnection();

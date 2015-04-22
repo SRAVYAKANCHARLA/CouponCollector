@@ -11,6 +11,7 @@ public class LoginDto implements Serializable {
 
 	private int userid;
 	private String email;
+	private String password;
 	private String firstname;
 	private String lastname;
 	private String mobilenumber;
@@ -72,13 +73,24 @@ public class LoginDto implements Serializable {
 	public void setMobilenumber(String mobilenumber) {
 		this.mobilenumber = mobilenumber;
 	}
+	
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
 
 	@Override
 	public String toString() {
 		return "LoginDto [userid=" + userid + ", email=" + email
-				+ ", firstname=" + firstname + ", lastname=" + lastname
-				+ ", mobilenumber=" + mobilenumber + ", zipcode=" + zipcode
-				+ ", category=" + category + "]";
+				+ ", password=" + password + ", firstname=" + firstname
+				+ ", lastname=" + lastname + ", mobilenumber=" + mobilenumber
+				+ ", zipcode=" + zipcode + ", category=" + category + "]";
 	}
+
+	
 
 }

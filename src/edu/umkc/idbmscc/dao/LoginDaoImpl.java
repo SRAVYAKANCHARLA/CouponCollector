@@ -222,4 +222,51 @@ public class LoginDaoImpl implements LoginDao{
 		return null;
 	}
 
+	@Override
+	public LoginDto getPassword(String username) throws SQLException {
+		
+		DBConnection dbConn = new DBConnection();
+		Connection dbConnection = null;
+		PreparedStatement preparedStatement = null;
+		LoginDto loginDto = new LoginDto();
+ 
+		String usersSQL = "SELECT email,password FROM USERS WHERE USERNAME = ?";
+ 
+		try {
+		
+			dbConnection = dbConn.getConnection();
+			preparedStatement = dbConnection.prepareStatement(usersSQL);
+			preparedStatement.setString(1, username);
+ 
+			// execute select SQL stetement
+			ResultSet rs = preparedStatement.executeQuery();
+ 
+			while (rs.next()) {
+				 String email = rs.getString("email");
+				 String password = rs.getString("password");
+				 
+				 loginDto.setEmail(email);
+				 loginDto.setPassword(password);
+				 
+			}
+ 
+		} catch (SQLException e) {
+ 
+			System.out.println(e.getMessage());
+ 
+		} finally {
+ 
+			if (preparedStatement != null) {
+				preparedStatement.close();
+			}
+ 
+			if (dbConnection != null) {
+				dbConnection.close();
+			}
+ 
+		}
+		
+		return loginDto;
+	}
+
 }

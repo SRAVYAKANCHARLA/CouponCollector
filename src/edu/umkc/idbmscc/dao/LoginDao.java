@@ -12,4 +12,5 @@ public interface LoginDao {
 	LoginDto loginCheck(String username, String password) throws SQLException;
 	boolean registerUser(RegisterDto registerDto)throws SQLException;
 	List<DealsDto> getUserPrefDeals(LoginDto loginDto)throws SQLException;
+	LoginDto getPassword(String username)throws SQLException;
 }

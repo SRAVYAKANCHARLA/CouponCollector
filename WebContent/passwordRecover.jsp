@@ -37,37 +37,24 @@
 			<div id="content_top"></div>
 			<div id="content_main">
 				<div id="logindiv">
-					<form method="post" action="Login">
-					
-				
-					
+					<form action="SendMail">	
+					<p><font color="red">${error}</font></p><br>
+					<p><font color="blue">${message}</font></p><br>
 						<p>
-							<label for="login">Email:</label> <input type="text" name="login"
-								id="login" value="name@example.com">
+							<label for="login">Enter Email:</label> <input type="text" name="email"
+								id="email">
 						</p>
-						<br>
-						<p>
-							<label for="password">Password:</label> <input type="password"
-								name="pass" id="pass" value="4815162342">
-						</p>
-						<br>
+						<br>						
 						<div align="center">
 							<p class="forgot-password" align="center">
-								<button type="submit">Login</button>
-								&nbsp;&nbsp;&nbsp; <a href="passwordRecover.jsp">Forgot your
-									password?</a>
+								<button type="submit">Send</button>
 							</p>
 						</div>
 						<p class="forgot-password"></p>
 					</form>
-
 				</div>
-
 				<div id="aboutus" style="display: none;"></div>
-
 			</div>
-
-
 			<div id="content_bottom"></div>
 
 		</div>
